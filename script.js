@@ -1,3 +1,5 @@
+const body = document.querySelector('body');
+
 const checkagua = document.getElementById('agua');
 const checkexer = document.getElementById('exercicio');
 const checksono = document.getElementById('sono');
@@ -39,4 +41,12 @@ checksono.addEventListener('click',()=>{
     }
     console.log(howMuchGreen)
     greenBar.style.width = howMuchGreen + '%';
+})
+
+document.addEventListener('click', ()=>{
+    if(howMuchGreen > 99){
+        body.classList.toggle('shadow')
+    }else{
+        body.classList.remove('shadow')
+    }
 })
